@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  build-secure-and-push:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      
+    - uses: Azure/container-scan@v0
+      with:
+        image-name: mcr.microsoft.com/dotnet/runtime-deps
