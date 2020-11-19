@@ -7,10 +7,12 @@ jobs:
     - uses: actions/checkout@master
       
     - uses: Azure/container-scan@v0
+      continue-on-error: true
       with:
         image-name: mcr.microsoft.com/dotnet/runtime-deps
         
     - uses: Azure/container-scan@v0
+      continue-on-error: true
       with:
         image-name: mcr.microsoft.com/azure-functions/dotnet:3.0
 
