@@ -20,4 +20,8 @@ jobs:
       continue-on-error: true
       with:
         image-name: mcr.microsoft.com/dotnet/aspnet:3.1-alpine
-
+        
+    - uses: Azure/container-scan@v0
+      continue-on-error: true
+      with:
+        image-name: mcr.microsoft.com/dotnet/aspnet:3.1-bionic
