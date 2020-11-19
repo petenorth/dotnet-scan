@@ -9,3 +9,8 @@ jobs:
     - uses: Azure/container-scan@v0
       with:
         image-name: mcr.microsoft.com/dotnet/runtime-deps
+        
+    - uses: Azure/container-scan@0
+      with:
+        image-name: mcr.microsoft.com/azure-functions/dotnet:3.0
+
